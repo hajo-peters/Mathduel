@@ -30,8 +30,35 @@ Structure
           - Change to Register
 - Main Menu
     - Top bar
+    - Friends
         - Profile
         - News and messages
         - Current rank
     - main body
+        - Aktive Matches
+        - open Matches
+        - Match history
+    - Bottom bar
+        - New Match or exercise
+
+- Friends
+    - Friend list
+    - Add Friend
+        - search by name
+
+- Friend
+    - Remove friend
+    - challenge friend
+
+- Profile
+    - Account infos.
+    - Logout
     - 
+
+- New Match or exercise
+    - New match
+        - Random
+        - challenge friend
+    - Training
+    - Challenge
+    -
