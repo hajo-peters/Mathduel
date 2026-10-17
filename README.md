@@ -1,6 +1,6 @@
 [Planning]
 Structure
-- Newcomer page
+  - Logged out
   - Contents
       - Language select
       - General info
@@ -58,7 +58,14 @@ Structure
 - New Match or exercise
     - New match
         - Random
+            - Mode select
         - challenge friend
+            - Mode select
     - Training
     - Challenge
-    -
+
+- Mode select
+  - chose topic
+      - general maths
+      - List of fields
+   
