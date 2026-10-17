@@ -1,3 +1,4 @@
+[Planning]
 Structure
 - Newcomer page
   - Contents
