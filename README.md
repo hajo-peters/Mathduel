@@ -1,0 +1,36 @@
+Structure
+- Newcomer page
+  - Contents
+      - Language select
+      - General info
+  - refs
+      - Login
+      - Register
+      - Download (browser)
+
+- Register
+  - Content:
+      - Input:
+          - Username
+          - Password
+      - Refs:
+          - Confirm to main menu and perhaps guide
+          - Change to login
+- guide:
+    - Rules
+    - Layout
+- Login
+  - Content:
+      - Input:
+          - Username
+          - Password
+      - Refs:
+          - Confirm to main menu
+          - Change to Register
+- Main Menu
+    - Top bar
+        - Profile
+        - News and messages
+        - Current rank
+    - main body
+    - 
