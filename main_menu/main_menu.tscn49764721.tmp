@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://0rw505ohwqf6"]
+
+[ext_resource type="Script" uid="uid://bma0vsa23otid" path="res://pages/main_menu.gd" id="1_4uxr5"]
+[ext_resource type="Texture2D" uid="uid://hpofeikfesgr" path="res://asset/profile-icon-symbol-design-illustration-vector.png" id="1_k4353"]
+[ext_resource type="Texture2D" uid="uid://buj4pdl4l4bbs" path="res://asset/1004017.png" id="2_4uxr5"]
+[ext_resource type="Script" uid="uid://bpioak5ssupky" path="res://pages/menu_bar.gd" id="4_0lim4"]
+
+[sub_resource type="Theme" id="Theme_0lim4"]
+default_font_size = 30
+
+[node name="MainMenu" type="Control" unique_id=1527419892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_0lim4")
+script = ExtResource("1_4uxr5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=278751198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="Panel" parent="VBoxContainer" unique_id=1828736738]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TopBar" unique_id=1925150473]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Button3" type="Button" parent="VBoxContainer/TopBar/HBoxContainer" unique_id=1713176774]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.49
+text = "	"
+icon = ExtResource("1_k4353")
+expand_icon = true
+
+[node name="Button2" type="Button" parent="VBoxContainer/TopBar/HBoxContainer" unique_id=550094105]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.49
+icon = ExtResource("2_4uxr5")
+expand_icon = true
+
+[node name="Button" type="Button" parent="VBoxContainer/TopBar/HBoxContainer" unique_id=213596248]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Friends"
+
+[node name="Label" type="Label" parent="VBoxContainer/TopBar/HBoxContainer" unique_id=1464993442]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "Rank:NaN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=641156979]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer" unique_id=1843697998]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Active" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=667204365]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Active"
+
+[node name="Open" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=1050778157]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Open"
+
+[node name="History" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=1410116955]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "History"
+
+[node name="MenuBar" type="TabContainer" parent="VBoxContainer" unique_id=1134838299]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+script = ExtResource("4_0lim4")
+
+[node name="Panel" type="Label" parent="VBoxContainer/MenuBar" unique_id=2114462262]
+layout_mode = 2
+text = "Active"
+metadata/_tab_index = 0
+
+[node name="Panel2" type="Label" parent="VBoxContainer/MenuBar" unique_id=1670898643]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Panel3" type="Label" parent="VBoxContainer/MenuBar" unique_id=759779979]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2

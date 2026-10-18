@@ -1,0 +1,231 @@
+[gd_scene format=3 uid="uid://bafymqh4h2qp8"]
+
+[ext_resource type="Script" uid="uid://calt8j2evipio" path="res://pages/logged_out.gd" id="1_8jprk"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5pe7a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pe7a"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jprk"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63py7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fkip0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6pma"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o24eb"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="LoggedOut" type="Control" unique_id=411457927]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8jprk")
+
+[node name="topBar" type="Panel" parent="." unique_id=1531775345]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="topBar" unique_id=218795370]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="topBar/MarginContainer" unique_id=1039866165]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="topBar/MarginContainer/HBoxContainer" unique_id=2088860553]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 70
+text = "Mathduel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="topBar/MarginContainer/HBoxContainer" unique_id=2070773682]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 40
+text = "Language"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="topBar/MarginContainer/HBoxContainer" unique_id=389326644]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="topBar/MarginContainer/HBoxContainer/AspectRatioContainer" unique_id=1892022168]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("CanvasTexture_5pe7a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=286624719]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.11
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=959593870]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=990766102]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1694832136]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=730744440]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Register" type="Button" parent="VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=572884105]
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_5pe7a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8jprk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_63py7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_fkip0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_b6pma")
+text = "Login"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer" unique_id=934083916]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="VBoxContainer/ScrollContainer/VBoxContainer/MarginContainer" unique_id=840440629]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_o24eb")
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel" unique_id=1396098542]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "General info panel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1407882172]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Download (sound)" type="Button" parent="VBoxContainer/ScrollContainer/VBoxContainer/MarginContainer2" unique_id=1057941333]
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal = SubResource("StyleBoxFlat_5pe7a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8jprk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_63py7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_fkip0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_b6pma")
+text = "Download Link"
+
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer/MarginContainer/Register" to="." method="_on_register_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/VBoxContainer/MarginContainer2/Download (sound)" to="." method="_on_download_pressed"]

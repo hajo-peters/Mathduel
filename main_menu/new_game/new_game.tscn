@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://b3w10b04gs1b1"]
+
+[ext_resource type="Script" uid="uid://eqjt8yrb1ne1" path="res://pages/new_game.gd" id="1_suml8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yudb1"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_suml8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnd13"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qk7k1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_38e66"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prj12"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="NewGame" type="Control" unique_id=668831057]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_suml8")
+
+[node name="TopBar" type="Panel" parent="." unique_id=1455864118]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TopBar" unique_id=692948686]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "New game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=450428269]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="List" type="Panel" parent="MarginContainer" unique_id=1627474530]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yudb1")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/List" unique_id=1860915840]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Control" type="Control" parent="MarginContainer/List/MarginContainer" unique_id=1089558763]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/List/MarginContainer/Control" unique_id=844487233]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/List/MarginContainer/Control/VBoxContainer" unique_id=1266334308]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="CreateMatch" type="Button" parent="MarginContainer/List/MarginContainer/Control/VBoxContainer/HBoxContainer" unique_id=1525373325]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_suml8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fnd13")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qk7k1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_38e66")
+theme_override_styles/focus = SubResource("StyleBoxFlat_prj12")
+text = "Create Match"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/List/MarginContainer/Control/VBoxContainer" unique_id=145456843]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="LearnTopic" type="Button" parent="MarginContainer/List/MarginContainer/Control/VBoxContainer/HBoxContainer2" unique_id=503291975]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_suml8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fnd13")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qk7k1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_38e66")
+theme_override_styles/focus = SubResource("StyleBoxFlat_prj12")
+text = "Learn topic"
+
+[node name="CreateQuiz" type="Button" parent="MarginContainer/List/MarginContainer/Control/VBoxContainer/HBoxContainer2" unique_id=2023812065]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_suml8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fnd13")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qk7k1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_38e66")
+theme_override_styles/focus = SubResource("StyleBoxFlat_prj12")
+text = "Create quiz"
+
+[node name="Something" type="Button" parent="MarginContainer/List/MarginContainer/Control/VBoxContainer/HBoxContainer2" unique_id=1860983267]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_suml8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fnd13")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qk7k1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_38e66")
+theme_override_styles/focus = SubResource("StyleBoxFlat_prj12")
+text = "?"
+
+[connection signal="pressed" from="MarginContainer/List/MarginContainer/Control/VBoxContainer/HBoxContainer/CreateMatch" to="." method="_on_create_match_pressed"]
+[connection signal="pressed" from="MarginContainer/List/MarginContainer/Control/VBoxContainer/HBoxContainer2/LearnTopic" to="." method="_on_learn_topic_pressed"]
+[connection signal="pressed" from="MarginContainer/List/MarginContainer/Control/VBoxContainer/HBoxContainer2/CreateQuiz" to="." method="_on_create_quiz_pressed"]
+[connection signal="pressed" from="MarginContainer/List/MarginContainer/Control/VBoxContainer/HBoxContainer2/Something" to="." method="_on_something_pressed"]

@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://5ij1tuvjca7x"]
+
+[ext_resource type="Script" uid="uid://c2qst55vg2pir" path="res://pages/search_for_user.gd" id="1_3exe2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wd3wy"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5xwu"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63562"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2p0fp"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_340th"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3exe2"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="SearchForUser" type="Control" unique_id=1972966462]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3exe2")
+
+[node name="Panel" type="Panel" parent="." unique_id=18190613]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wd3wy")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=399519752]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer" unique_id=288440991]
+layout_mode = 2
+
+[node name="Close" type="Button" parent="Panel/MarginContainer/HBoxContainer" unique_id=1069282334]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.35
+theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_l5xwu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_63562")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2p0fp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_340th")
+text = "<-"
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/HBoxContainer" unique_id=224852464]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 60
+text = "Name:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label2" type="LineEdit" parent="Panel/MarginContainer/HBoxContainer" unique_id=951473076]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 1.2
+theme_override_font_sizes/font_size = 50
+placeholder_text = "Type in Username"
+
+[node name="VBoxContainer" type="MarginContainer" parent="." unique_id=1892734674]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="VBoxContainer" unique_id=818710025]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3exe2")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Panel" unique_id=1624462137]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Control" type="Control" parent="VBoxContainer/Panel/MarginContainer" unique_id=1535256450]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Panel/MarginContainer/Control" unique_id=699102342]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MessagesList" type="VBoxContainer" parent="VBoxContainer/Panel/MarginContainer/Control/ScrollContainer" unique_id=1593750230]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="NoMessages" type="Label" parent="VBoxContainer/Panel/MarginContainer/Control/ScrollContainer/MessagesList" unique_id=1043452352]
+visible = false
+layout_mode = 2
+text = "No messages for u 🥲
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<3"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/Panel/MarginContainer/Control" unique_id=602589496]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.9
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 80
+text = "Search"
+
+[connection signal="pressed" from="Panel/MarginContainer/HBoxContainer/Close" to="." method="_on_close_pressed"]
+[connection signal="text_changed" from="Panel/MarginContainer/HBoxContainer/Label2" to="." method="_on_label_2_text_changed"]

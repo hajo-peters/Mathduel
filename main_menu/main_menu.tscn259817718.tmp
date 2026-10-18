@@ -1,0 +1,245 @@
+[gd_scene format=3 uid="uid://0rw505ohwqf6"]
+
+[ext_resource type="Texture2D" uid="uid://hpofeikfesgr" path="res://asset/profile-icon-symbol-design-illustration-vector.png" id="1_k4353"]
+[ext_resource type="Texture2D" uid="uid://buj4pdl4l4bbs" path="res://asset/1004017.png" id="2_4uxr5"]
+
+[sub_resource type="Theme" id="Theme_0lim4"]
+default_font_size = 30
+
+[sub_resource type="GDScript" id="GDScript_k4353"]
+script/source = "class_name MainMenu
+extends Control
+
+@onready var button_3: Button = $VBoxContainer/TopBar/HBoxContainer/Button3
+@onready var button_2: Button = $VBoxContainer/TopBar/HBoxContainer/Button2
+@onready var button: Button = $VBoxContainer/TopBar/HBoxContainer/Button
+@onready var h_box_container: HBoxContainer = $VBoxContainer/MainBody/HBoxContainer
+@onready var new_game: Button = $NewGame
+@onready var main_body: Control = $VBoxContainer/MainBody
+@onready var main_body_overlay: Control = $VBoxContainer/MainBody/MainBodyOverlay
+@onready var bar_list: MarginContainer = $VBoxContainer/BarList
+
+
+
+var profile_page:PackedScene = preload(\"res://user_profile/profile.tscn\")
+var message_page:PackedScene = preload(\"res://pages/messages.tscn\")
+var friends_page:PackedScene = preload(\"res://pages/friends.tscn\")
+
+var _tween: Tween
+func set_hbox_offset(page_index:int):
+	var page_width: float = get_viewport_rect().size.x
+	var target_x: float = page_width * page_index
+	if _tween and _tween.is_running():
+		_tween.kill()
+	
+	_tween = create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	_tween.tween_property(h_box_container, \"position:x\", -target_x, 0.35)
+
+func _on_active_pressed() -> void:
+	set_hbox_offset(0)
+
+
+func _on_open_pressed() -> void:
+	set_hbox_offset(1)
+
+
+func _on_history_pressed() -> void:
+	set_hbox_offset(2)
+
+
+var toggle_menu_page_view = false
+var last_opened:PackedScene
+var active_scene: PackedScene = null
+var menu_page_instance: Node = null
+
+func open_menu_page(scene: PackedScene) -> void:
+	# Guard against unassigned PackedScenes in the inspector
+	if scene == null:
+		push_warning(\"Attempted to open a null PackedScene.\")
+		return
+	for child in main_body_overlay.get_children():
+		child.queue_free()
+	if is_instance_valid(menu_page_instance):
+		
+		menu_page_instance.queue_free()
+		menu_page_instance = null
+		if active_scene == scene:
+			active_scene = null
+			set_main_visible(true)
+			return
+	set_main_visible(false)
+	active_scene = scene
+	menu_page_instance = scene.instantiate()
+	main_body_overlay.add_child(menu_page_instance)
+
+
+func set_main_visible(visibility: bool) -> void:
+	new_game.visible = visibility
+	h_box_container.visible = visibility
+	bar_list.visible = visibility
+
+
+# Profile button
+func _on_button_3_pressed() -> void:
+	open_menu_page(profile_page)
+
+# Messages button
+func _on_button_2_pressed() -> void:
+	open_menu_page(message_page)
+
+# Friends :)
+func _on_button_pressed() -> void:
+	open_menu_page(friends_page)
+
+
+func _on_new_game_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://pages/new_game.tscn\")
+"
+
+[node name="MainMenu" type="Control" unique_id=1527419892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_0lim4")
+script = SubResource("GDScript_k4353")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=278751198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="Panel" parent="VBoxContainer" unique_id=1828736738]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TopBar" unique_id=1925150473]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Button3" type="Button" parent="VBoxContainer/TopBar/HBoxContainer" unique_id=1713176774]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.49
+text = "	"
+icon = ExtResource("1_k4353")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="VBoxContainer/TopBar/HBoxContainer" unique_id=550094105]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.49
+icon = ExtResource("2_4uxr5")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button" type="Button" parent="VBoxContainer/TopBar/HBoxContainer" unique_id=213596248]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Friends"
+
+[node name="Label" type="Label" parent="VBoxContainer/TopBar/HBoxContainer" unique_id=1464993442]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "Rank:NaN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BarList" type="MarginContainer" parent="VBoxContainer" unique_id=641156979]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BarList" unique_id=1843697998]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Active" type="Button" parent="VBoxContainer/BarList/HBoxContainer" unique_id=667204365]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Active"
+
+[node name="Open" type="Button" parent="VBoxContainer/BarList/HBoxContainer" unique_id=1050778157]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Open"
+
+[node name="History" type="Button" parent="VBoxContainer/BarList/HBoxContainer" unique_id=1410116955]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "History"
+
+[node name="MainBody" type="Control" parent="VBoxContainer" unique_id=1244650314]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MainBody" unique_id=164414737]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 3.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/MainBody/HBoxContainer" unique_id=1931458602]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "tab1
+"
+
+[node name="Label2" type="Label" parent="VBoxContainer/MainBody/HBoxContainer" unique_id=242043879]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "tab2"
+
+[node name="Label3" type="Label" parent="VBoxContainer/MainBody/HBoxContainer" unique_id=1723381947]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "tab3"
+
+[node name="MainBodyOverlay" type="Control" parent="VBoxContainer/MainBody" unique_id=1834899600]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NewGame" type="Button" parent="." unique_id=1022506469]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.9
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "New Game"
+
+[connection signal="pressed" from="VBoxContainer/TopBar/HBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/TopBar/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/TopBar/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BarList/HBoxContainer/Active" to="." method="_on_active_pressed"]
+[connection signal="pressed" from="VBoxContainer/BarList/HBoxContainer/Open" to="." method="_on_open_pressed"]
+[connection signal="pressed" from="VBoxContainer/BarList/HBoxContainer/History" to="." method="_on_history_pressed"]
+[connection signal="pressed" from="NewGame" to="." method="_on_new_game_pressed"]

@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://c8jmgeepb1pib"]
+
+[ext_resource type="Script" uid="uid://b6mebywekf5c5" path="res://pages/log_in_or_register.gd" id="1_ybcux"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ybcux"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4vu2x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iy6ql"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ffy8m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m7dng"]
+
+[node name="LogInOrRegister" type="Control" unique_id=536047062]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ybcux")
+mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=605675639]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 100
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=1391415025]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel" unique_id=1364732602]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer" unique_id=1592395432]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1343737496]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 80
+text = "Login
+(works regardless 
+currently)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Email" type="TextEdit" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=689346326]
+visible = false
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+placeholder_text = "Email"
+
+[node name="EmailOrUsername" type="TextEdit" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=447546790]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+placeholder_text = "Email or Username"
+
+[node name="Username" type="TextEdit" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1668944853]
+visible = false
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+placeholder_text = "Username"
+
+[node name="Password" type="TextEdit" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=210989890]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+placeholder_text = "Password"
+
+[node name="ConfirmPassword" type="TextEdit" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1187118821]
+visible = false
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+placeholder_text = "Confirm Password"
+
+[node name="ConfirmLogin" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=191725931]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 100
+text = "Login 
+"
+
+[node name="ChangeToRegister" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1012898121]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ybcux")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4vu2x")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iy6ql")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ffy8m")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_m7dng")
+text = "or Register"
+
+[node name="Control" type="Control" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1491814611]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/ConfirmLogin" to="." method="_on_confirm_login_pressed"]
+[connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/ChangeToRegister" to="." method="_on_change_to_register_pressed"]
