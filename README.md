@@ -12,8 +12,10 @@ Structure
 - Register
   - Content:
       - Input:
+          - Email
           - Username
           - Password
+          - Confirm Password
       - Refs:
           - Confirm to main menu and perhaps guide
           - Change to login
@@ -23,7 +25,7 @@ Structure
 - Login
   - Content:
       - Input:
-          - Username
+          - Username or Email
           - Password
       - Refs:
           - Confirm to main menu
