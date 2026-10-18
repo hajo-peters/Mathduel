@@ -32,10 +32,11 @@ Structure
           - Change to Register
 - Main Menu
     - Top bar
-    - Friends
+        - Friends
         - Profile
         - News and messages
         - Current rank
+
     - main body
         - Aktive Matches
         - open Matches
