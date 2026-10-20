@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://c8kgxp5abkrse"]
+
+[ext_resource type="Script" uid="uid://cynwxw4epivbd" path="res://main_menu/new_game/match/match_started.gd" id="1_trdox"]
+[ext_resource type="Texture2D" uid="uid://b4bupfve4lr68" path="res://asset/istockphoto-1253567302-612x612.png" id="2_diy5x"]
+[ext_resource type="Texture2D" uid="uid://bkac7h7t04qo8" path="res://asset/images.jpg" id="3_xwreh"]
+
+[sub_resource type="Theme" id="Theme_1vnlx"]
+default_font_size = 70
+
+[node name="MatchStarted" type="Control" unique_id=1737164426]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1vnlx")
+script = ExtResource("1_trdox")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1692449067]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=132376080]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel" unique_id=897605427]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 200
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer" unique_id=1653186644]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1768340186]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 100
+text = "Match started"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Waiting for Oponent" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1861157606]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "Waiting for Oponent"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=762221003]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("2_diy5x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1154049124]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=535447751]
+layout_mode = 2
+text = "Cancel"
+
+[node name="Panel" type="Panel" parent="." unique_id=1778740736]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1958659346]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer" unique_id=321927070]
+layout_mode = 2
+theme_override_font_sizes/font_size = 300
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer" unique_id=1681246550]
+visible = false
+layout_mode = 2
+text = "In case nothing ever 
+happens, press this! "
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer" unique_id=1990842745]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_xwreh")
+
+[connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Button" to="." method="_on_something_did_happen"]

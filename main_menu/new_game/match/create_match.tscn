@@ -2,15 +2,41 @@
 
 [ext_resource type="Script" uid="uid://bjlt2n2of1mwi" path="res://main_menu/new_game/match/create_match.gd" id="1_7xs27"]
 [ext_resource type="Script" uid="uid://c5ydghvlwfb77" path="res://user_profile/User.gd" id="2_owqxn"]
+[ext_resource type="StyleBox" uid="uid://v41817ylsisl" path="res://rounded.tres" id="3_018vp"]
 
 [sub_resource type="Resource" id="Resource_owqxn"]
 script = ExtResource("2_owqxn")
 name = "Hajo, Friend of all"
-id = "the very specific id of Hajo"
+id = "0"
 level = 5
 metadata/_custom_type_script = "uid://c5ydghvlwfb77"
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p8hmo"]
+[sub_resource type="Resource" id="Resource_018vp"]
+script = ExtResource("2_owqxn")
+id = "1"
+metadata/_custom_type_script = "uid://c5ydghvlwfb77"
+
+[sub_resource type="Resource" id="Resource_0jpgr"]
+script = ExtResource("2_owqxn")
+id = "2"
+metadata/_custom_type_script = "uid://c5ydghvlwfb77"
+
+[sub_resource type="Resource" id="Resource_u4xfo"]
+script = ExtResource("2_owqxn")
+id = "3"
+metadata/_custom_type_script = "uid://c5ydghvlwfb77"
+
+[sub_resource type="Resource" id="Resource_wxytu"]
+script = ExtResource("2_owqxn")
+id = "4"
+metadata/_custom_type_script = "uid://c5ydghvlwfb77"
+
+[sub_resource type="Resource" id="Resource_03j4y"]
+script = ExtResource("2_owqxn")
+id = "5"
+metadata/_custom_type_script = "uid://c5ydghvlwfb77"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_01uqj"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
@@ -20,6 +46,7 @@ corner_radius_top_left = 50
 corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
+corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhjj2"]
 content_margin_left = 4.0
@@ -74,10 +101,16 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
+[sub_resource type="Theme" id="Theme_3tt35"]
+default_font_size = 70
+
 [sub_resource type="DPITexture" id="DPITexture_7xs27"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\"><path fill=\"none\" stroke=\"#b2b2b2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-opacity=\".85\" stroke-width=\"2\" d=\"m2 4 4 4 4-4\"/></svg>
 "
 base_scale = 3.0
+
+[sub_resource type="Theme" id="Theme_018vp"]
+default_font_size = 60
 
 [sub_resource type="DPITexture" id="DPITexture_owqxn"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"8\"><path fill=\"none\" stroke=\"#fff\" stroke-width=\"2\" d=\"m4 6 4-3.5L12 6\"/></svg>
@@ -116,6 +149,106 @@ base_scale = 3.0
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"8\"><path fill=\"none\" stroke=\"#fff\" stroke-width=\"2\" d=\"m12 2-4 3.5L4 2\"/></svg>
 "
 base_scale = 3.0
+
+[sub_resource type="Theme" id="Theme_0jpgr"]
+default_font_size = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_018vp"]
+content_margin_left = 40.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(0.13682574, 0.13682574, 0.13682568, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jpgr"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u4xfo"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxytu"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03j4y"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twv2m"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txnjx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uw0n1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7xs27"]
 content_margin_left = 4.0
@@ -253,7 +386,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7xs27")
-friends_list = Array[ExtResource("2_owqxn")]([SubResource("Resource_owqxn")])
+friends_list = Array[ExtResource("2_owqxn")]([SubResource("Resource_owqxn"), SubResource("Resource_018vp"), SubResource("Resource_0jpgr"), SubResource("Resource_u4xfo"), SubResource("Resource_wxytu"), SubResource("Resource_03j4y")])
 
 [node name="TopBar" type="Panel" parent="." unique_id=1252200107]
 layout_mode = 1
@@ -283,7 +416,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
 theme_override_font_sizes/font_size = 80
-theme_override_styles/normal = SubResource("StyleBoxFlat_p8hmo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_01uqj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hhjj2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_xj22a")
 theme_override_styles/focus = SubResource("StyleBoxFlat_d3u4h")
@@ -321,10 +454,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/List/MarginContainer" unique_id=429325904]
 layout_mode = 2
@@ -345,8 +478,11 @@ text = "Visibility: "
 [node name="Visibility" type="OptionButton" parent="MarginContainer/List/MarginContainer/VBoxContainer/GridContainer" unique_id=264605613]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = SubResource("Theme_3tt35")
 theme_override_font_sizes/font_size = 70
 theme_override_icons/arrow = SubResource("DPITexture_7xs27")
+expand_icon = true
+selected = 0
 item_count = 2
 popup/item_0/text = "public"
 popup/item_0/id = 0
@@ -356,11 +492,12 @@ popup/item_1/id = 1
 [node name="Label2" type="Label" parent="MarginContainer/List/MarginContainer/VBoxContainer/GridContainer" unique_id=1841905417]
 layout_mode = 2
 theme_override_font_sizes/font_size = 80
-text = "Rounds"
+text = "Rounds:"
 
 [node name="RoundsCount" type="SpinBox" parent="MarginContainer/List/MarginContainer/VBoxContainer/GridContainer" unique_id=540395268]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = SubResource("Theme_018vp")
 theme_override_constants/buttons_width = 50
 theme_override_icons/up = SubResource("DPITexture_owqxn")
 theme_override_icons/up_hover = SubResource("DPITexture_6fo8m")
@@ -374,22 +511,72 @@ max_value = 50.0
 value = 6.0
 suffix = " Rounds"
 
-[node name="Invite" type="Button" parent="MarginContainer/List/MarginContainer/VBoxContainer" unique_id=1499576415]
-custom_minimum_size = Vector2(0, 200)
+[node name="Label3" type="Label" parent="MarginContainer/List/MarginContainer/VBoxContainer/GridContainer" unique_id=1779501823]
 layout_mode = 2
 theme_override_font_sizes/font_size = 80
-text = "Invite"
+text = "Types:"
+
+[node name="MenuButton" type="MenuButton" parent="MarginContainer/List/MarginContainer/VBoxContainer/GridContainer" unique_id=76369685]
+layout_mode = 2
+theme = SubResource("Theme_0jpgr")
+text = "Question types"
+flat = false
+item_count = 5
+popup/item_0/text = "Multiple Choice"
+popup/item_0/checkable = 1
+popup/item_0/id = 0
+popup/item_1/text = "True/False"
+popup/item_1/checkable = 1
+popup/item_1/id = 1
+popup/item_2/text = "Match"
+popup/item_2/checkable = 1
+popup/item_2/id = 2
+popup/item_3/text = "Numeric Input"
+popup/item_3/checkable = 1
+popup/item_3/id = 3
+popup/item_4/text = "Fill in Blank"
+popup/item_4/checkable = 1
+popup/item_4/id = 4
+
+[node name="Invite" type="ScrollContainer" parent="MarginContainer/List/MarginContainer/VBoxContainer" unique_id=1117091775]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_018vp")
+
+[node name="Friends" type="VBoxContainer" parent="MarginContainer/List/MarginContainer/VBoxContainer/Invite" unique_id=1131241079]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/List/MarginContainer/VBoxContainer/Invite/Friends" unique_id=1471289579]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "Friends List:"
+horizontal_alignment = 1
 
 [node name="Topic" type="Button" parent="MarginContainer/List/MarginContainer/VBoxContainer" unique_id=1983504401]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_0jpgr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u4xfo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wxytu")
 text = "Topics"
 
 [node name="Start" type="Button" parent="MarginContainer/List/MarginContainer/VBoxContainer" unique_id=1587533021]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_font_sizes/font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_03j4y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_twv2m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_txnjx")
+theme_override_styles/disabled = ExtResource("3_018vp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_uw0n1")
 text = "Start"
 
 [node name="topics" type="VBoxContainer" parent="MarginContainer/List/MarginContainer" unique_id=1576064399]
@@ -567,28 +754,7 @@ grow_vertical = 2
 size_flags_vertical = 3
 columns = 3
 
-[node name="Friends" type="VBoxContainer" parent="MarginContainer/List/MarginContainer" unique_id=1076251169]
-visible = false
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="returnFromFriends" type="Button" parent="MarginContainer/List/MarginContainer/Friends" unique_id=217326190]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.15
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_7xs27")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_623ui")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ep61v")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_x364p")
-theme_override_styles/focus = SubResource("StyleBoxFlat_ih4nd")
-text = "<-"
-
 [connection signal="pressed" from="TopBar/MarginContainer/VBoxContainer/Close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="MarginContainer/List/MarginContainer/VBoxContainer/Invite" to="." method="_on_invite_pressed"]
 [connection signal="pressed" from="MarginContainer/List/MarginContainer/VBoxContainer/Topic" to="." method="_on_topic_pressed"]
 [connection signal="pressed" from="MarginContainer/List/MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/List/MarginContainer/topics/returnFromTopics" to="." method="_on_return_from_topics_pressed"]
-[connection signal="pressed" from="MarginContainer/List/MarginContainer/Friends/returnFromFriends" to="." method="_on_return_from_friends_pressed"]

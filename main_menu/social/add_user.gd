@@ -5,14 +5,14 @@ extends Control
 @onready var add: Button = $Panel/MarginContainer/HBoxContainer/Add
 
 signal userAdded(id:int)
-signal userRemoved(id:int)
+signal userRemoved
 @export var user_id:String
 var added:bool = false
 
 func _on_add_pressed() -> void:
 	if added:
 		add.text = "+"
-		userRemoved.emit(user_id)
+		userRemoved.emit()
 		added = false
 	else:
 		userAdded.emit(user_id)

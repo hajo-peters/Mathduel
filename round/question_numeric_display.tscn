@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://jo31yxq1qe8m"]
+
+[ext_resource type="Script" uid="uid://b5b40i00a5rhu" path="res://round/question_numeric_display.gd" id="1_71nqt"]
+[ext_resource type="Script" uid="uid://d0h86d67prmmc" path="res://round/question_numeric.gd" id="2_vusvg"]
+[ext_resource type="PackedScene" uid="uid://b8gwoqwp8s67r" path="res://round/rounded_button.tscn" id="3_s4y3a"]
+
+[sub_resource type="Resource" id="Resource_s4y3a"]
+script = ExtResource("2_vusvg")
+prefix = "Enter something"
+answer_value = 20.0
+metadata/_custom_type_script = "uid://d0h86d67prmmc"
+
+[node name="QuestionNumericDisplay" type="Control" unique_id=671149805]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_71nqt")
+question = SubResource("Resource_s4y3a")
+
+[node name="Timer" type="Timer" parent="." unique_id=1507141009]
+one_shot = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1491844259]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer" unique_id=58350842]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 70
+
+[node name="Button" parent="VBoxContainer" unique_id=764817984 instance=ExtResource("3_s4y3a")]
+layout_mode = 2
+text = "submit"
+
+[connection signal="text_submitted" from="VBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

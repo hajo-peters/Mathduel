@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://csj01r8ply27t"]
+
+[ext_resource type="Script" uid="uid://d372xgo1u8gc8" path="res://round/question_multiple_choice_display.gd" id="1_yar40"]
+[ext_resource type="Script" uid="uid://ct0n4dr0hgao1" path="res://round/question_multiple_choice.gd" id="2_rxqqg"]
+
+[sub_resource type="Resource" id="Resource_p68xi"]
+script = ExtResource("2_rxqqg")
+correct_index = 4
+answers = Array[String](["1", "2", "3", "4"])
+question = "biggest"
+metadata/_custom_type_script = "uid://ct0n4dr0hgao1"
+
+[node name="QuestionMultipleChoice" type="Control" unique_id=1407692509]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yar40")
+question = SubResource("Resource_p68xi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1095949124]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20

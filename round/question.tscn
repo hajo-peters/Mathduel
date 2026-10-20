@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://dj5j4ra8q82lt"]
+
+[ext_resource type="Script" uid="uid://bjansl5i5ybpk" path="res://multiple_choice.gd" id="1_fccpa"]
+[ext_resource type="Script" uid="uid://deoy8flm1jqse" path="res://round/Question.gd" id="2_mldp8"]
+[ext_resource type="Script" uid="uid://bsjqk7lv3qw2i" path="res://round/question_boolean.gd" id="3_qfcyj"]
+[ext_resource type="Script" uid="uid://ct0n4dr0hgao1" path="res://round/question_multiple_choice.gd" id="4_r0rus"]
+[ext_resource type="Script" uid="uid://cpm867lb0pr0a" path="res://round/question_text.gd" id="5_mldp8"]
+
+[sub_resource type="Theme" id="Theme_i7px3"]
+default_font_size = 40
+
+[sub_resource type="Resource" id="Resource_inehk"]
+script = ExtResource("3_qfcyj")
+question = "1+1=2"
+metadata/_custom_type_script = "uid://bsjqk7lv3qw2i"
+
+[sub_resource type="Resource" id="Resource_10yuh"]
+script = ExtResource("4_r0rus")
+correct_index = 3
+answers = Array[String](["1", "2", "4", "3"])
+question = "Was ist die höchste Zahl"
+metadata/_custom_type_script = "uid://ct0n4dr0hgao1"
+
+[sub_resource type="Resource" id="Resource_qfcyj"]
+script = ExtResource("5_mldp8")
+metadata/_custom_type_script = "uid://cpm867lb0pr0a"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qcj4"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5eqc"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_00cbo"]
+
+[node name="QuestionDisplay" type="Control" unique_id=449377947]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_i7px3")
+script = ExtResource("1_fccpa")
+questions = Array[ExtResource("2_mldp8")]([SubResource("Resource_inehk"), SubResource("Resource_10yuh"), SubResource("Resource_qfcyj"), null])
+
+[node name="Panel" type="Panel" parent="." unique_id=618535937]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1qcj4")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1326603875]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Control" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=840907208]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Panel" type="Panel" parent="Panel/MarginContainer/Control" unique_id=2039896852]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_s5eqc")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/Control/Panel" unique_id=1070200381]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/Control/Panel/MarginContainer" unique_id=1419213226]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/Control" unique_id=546161281]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme_override_font_sizes/font_size = 100
+text = "<Time left>"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/Control" unique_id=385495193]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+texture = SubResource("CanvasTexture_00cbo")
+
+[node name="QuestionDisplayArea" type="Control" parent="Panel/MarginContainer/Control" unique_id=1728081624]
+layout_mode = 2
+size_flags_vertical = 3

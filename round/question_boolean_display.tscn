@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://ddy7bxm77xmmv"]
+
+[ext_resource type="Script" uid="uid://b7i7iwkmaj2hx" path="res://round/question_boolean_display.gd" id="1_1c6c4"]
+[ext_resource type="Script" uid="uid://bsjqk7lv3qw2i" path="res://round/question_boolean.gd" id="2_kew7h"]
+[ext_resource type="PackedScene" uid="uid://b8gwoqwp8s67r" path="res://round/rounded_button.tscn" id="3_r32vk"]
+
+[sub_resource type="Resource" id="Resource_r32vk"]
+script = ExtResource("2_kew7h")
+metadata/_custom_type_script = "uid://bsjqk7lv3qw2i"
+
+[node name="QuestionBooleanDisplay" type="Control" unique_id=1184386373]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1c6c4")
+question = SubResource("Resource_r32vk")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=691041249]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Button" parent="VBoxContainer" unique_id=764817984 instance=ExtResource("3_r32vk")]
+layout_mode = 2
+text = "true"
+
+[node name="Button2" parent="VBoxContainer" unique_id=145947832 instance=ExtResource("3_r32vk")]
+layout_mode = 2
+text = "false"
