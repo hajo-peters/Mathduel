@@ -1,3 +1,6 @@
+###Important Info
+Everything is broken in the latest godot release because of a change in class naming conventions😭😭😭 will fix soon
+
 [Planning]
 Structure
   - Logged out
